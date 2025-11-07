@@ -1,0 +1,46 @@
+
+## 🧠 Methodology Overview
+
+Our approach consists of three key steps:
+
+1.  **Constrained Sigmoid Similarity (CSS):** A novel, label-agnostic similarity measure that transforms Euclidean distances into smooth, bounded scores using a data-adaptive sigmoid function.
+2.  **Fuzzy Equivalence Relation:** The CSS matrix is used to define a Tmin-fuzzy equivalence relation, ensuring mathematical coherence (reflexivity, symmetry, transitivity).
+3.  **Binary PSO Optimization:** A single-objective function balances sparsity (`α||w||₀`) and discriminative power (`f̃₂(w)`) and is optimized using Binary Particle Swarm Optimization (BPSO).
+
+For a complete description of the methodology, please refer to the full paper.
+
+## ⚙️ Usage Instructions
+
+### Prerequisites
+- MATLAB R2023a or later (compatible with earlier versions likely, but not tested)
+- Statistics and Machine Learning Toolbox
+- Global Optimization Toolbox (for BPSO)
+
+### Steps to Run
+
+1.  **Prepare Data:** Place your dataset files (e.g., `.mat` or `.csv`) in the `data/` folder. Ensure each file contains a variable `X` (n x p data matrix) and `y` (n x 1 label vector).
+2.  **Run the main algorithm:**
+    ```matlab
+    % Example: Run feature selection on the 'crx' dataset
+    selected_features = methodology('data/crx.mat', alpha=0.15);
+    ```
+    The function returns the indices of the selected features.
+3.  **Reproduce experiments:**
+    - Run `experimental_results.m` to generate classification accuracies and ROC curves.
+    - Run `table4_generator.m` to reproduce the comparative results in Table 4 against baseline methods.
+
+### Configuration
+- The trade-off parameter `α` is set to `0.15` by default (as used in the paper) to prioritize geometric discriminability.
+- BPSO parameters (population size, iterations) are defined within the scripts and can be modified as needed.
+
+## 📚 Citation
+
+If you use this code or the ideas from our work in your research, please cite our paper:
+
+```bibtex
+@article{safarpour2025fuzzy,
+  title={Fuzzy Equivalence--Driven Feature Selection with Constrained Sigmoid Similarity for Interpretable Supervised Learning},
+  author={Safarpour, Mohammad Hossein and Alavi, Seyed Majid and Izadikhah, Mohammad and Dibachi, Hossein},
+  journal={Expert Systems with Applications},
+  year={2025}
+}

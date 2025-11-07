@@ -1,0 +1,12 @@
+Feature Selected=
+
+crx=[8 9 10 11]
+australian=[8 9 12]
+heart=[9 11 13 ]
+ionosphere=[2 3 4 13 ]
+wpbc=[4 10 11 19 21 27 ]
+wdbc=[2 23 26]
+
+
+
+
