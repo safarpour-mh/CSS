@@ -1,0 +1,7 @@
+Dataset	FS Params	Total FLOPs (x10^9)	FS Time (s)	Latency Full (ms)	Latency Sel (ms)
+ionospher	1	11.23	25.15	0.0402	0.0195
+crx	1	25.33	126.05	0.0581	0.0404
+australian	1	24.47	133.84	0.0464	0.0360
+heart	1	3.65	13.96	0.0201	0.0140
+wpbc	1	3.85	8.75	0.0171	0.0137
+wdbc	1	27.14	94.20	0.0448	0.0355
